@@ -1,21 +1,22 @@
-# SpaceAgenciesRabbitmq
+# Space Agencies RabbitMQ
 
-**TODO: Add description**
+This is a repository for my university assignment for writing a simple distributed system utilizing rabbitmq. 
 
-## Installation
+## Installation and running
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `space_agencies_rabbitmq` to your list of dependencies in `mix.exs`:
+First you need to have elixir and erlang-dev installed.
 
-```elixir
-def deps do
-  [
-    {:space_agencies_rabbitmq, "~> 0.1.0"}
-  ]
-end
-```
+Then just simply type these commands to clone: 
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/space_agencies_rabbitmq](https://hexdocs.pm/space_agencies_rabbitmq).
+    $ git clone https://github.com/Vetchu/space_agency_RabbitMQ
+    $ cd space_agency_RabbitMQ
 
+Install and compile dependencies:
+
+    $ mix deps.get
+    $ mix deps.compile
+
+Compile and run:
+
+    $ mix compile
+    $ mix run run.exs
