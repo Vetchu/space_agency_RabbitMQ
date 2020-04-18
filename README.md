@@ -20,3 +20,7 @@ Compile and run:
 
     $ mix compile
     $ mix run run.exs
+
+## Diagram of system
+
+![diagram](./doc/Diagram.png "Diagram of system")
