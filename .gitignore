@@ -24,3 +24,5 @@ space_agencies_rabbitmq-*.tar
 
 /log
 /test
+/mix.lock
+/.formatter.exs
