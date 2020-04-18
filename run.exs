@@ -1,11 +1,8 @@
 {:ok, adm1} = Admin.start_link("admin")
 {:ok, a1} = Agency.start_link("ag1")
 {:ok, a2} = Agency.start_link("ag2")
-{:ok, p1} = Provider.start_link("prov1", ["satellite", "personal"])
-{:ok, p2} = Provider.start_link("prov2", ["satellite", "load"])
-
-{:ok, connection} = AMQP.Connection.open()
-{:ok, chan} = AMQP.Channel.open(connection)
+{:ok, _p1} = Provider.start_link("prov1", ["satellite", "personal"])
+{:ok, _p2} = Provider.start_link("prov2", ["satellite", "load"])
 
 GenServer.cast(a1, {:order, "load"})
 GenServer.cast(a2, {:order, "load"})
