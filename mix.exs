@@ -3,7 +3,7 @@ defmodule SpaceAgenciesRabbitmq.MixProject do
 
   def project do
     [
-      app: :space_agencies_rabbitmq,
+      app: :Agency,
       version: "0.1.0",
       elixir: "~> 1.1",
       build_embedded: Mix.env == :prod,
@@ -14,13 +14,14 @@ defmodule SpaceAgenciesRabbitmq.MixProject do
 
   # Run "mix help compile.app" to learn about applications.
   def application do
-    [applications: [:amqp]]
+    [applications: [:amqp, :uuid]]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:amqp, "~> 1.1"},
+      {:uuid, "~> 1.1.8"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
