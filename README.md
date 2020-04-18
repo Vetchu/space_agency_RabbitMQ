@@ -1,4 +1,4 @@
-# Space Agencies RabbitMQ
+# Space Agencies written in RabbitMQ
 
 This is a repository for my university assignment for writing a simple distributed system utilizing rabbitmq. 
 
