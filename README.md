@@ -23,4 +23,4 @@ Compile and run:
 
 ## Diagram of system
 
-![diagram](./doc/Diagram.png "Diagram of system")
+![diagram](./docs/Diagram.png "Diagram of system")
