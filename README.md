@@ -1,6 +1,10 @@
 # Space Agencies written in RabbitMQ
 
 This is a repository for my university assignment for writing a simple distributed system utilizing rabbitmq. 
+The system is divided into:
+- consumers (called agencies)
+- producers (called providers)
+- admin module (receiving all traffic inside the system)
 
 ## Installation and running
 

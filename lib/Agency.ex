@@ -55,9 +55,10 @@ defmodule Agency do
 
   def handle_info({:basic_deliver, payload, meta}, chan) do
     this_uuid = uuid()
+
     if(String.contains?("#{meta.routing_key}", "admin")) do
       IO.puts(" [***] [#{this_uuid} Agency]: \n  Admin message: #{payload}\n")
-      Basic.ack(chan,  meta.delivery_tag)
+      Basic.ack(chan, meta.delivery_tag)
     else
       spawn(fn -> consume(chan, meta.delivery_tag, meta.reply_to, payload, this_uuid) end)
     end
@@ -81,8 +82,9 @@ defmodule Agency do
 
   @impl true
   def handle_cast({:order, offer}, chan) do
-    if(Enum.member?(@offers,offer)) do
+    if(Enum.member?(@offers, offer)) do
       agency_id = uuid()
+
       spawn(fn ->
         msg_uuid = UUID.uuid1()
         :ok = Basic.publish(chan, "", offer, "#{msg_uuid}", reply_to: agency_id)
